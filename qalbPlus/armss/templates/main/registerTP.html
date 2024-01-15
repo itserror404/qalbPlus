@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <form method="POST">
+                {% csrf_token %}
+            <div class="row">
+
+                <h2>Sign Up</h2>
+                    <div class="col-md-12">
+                       <br>
+                        <label for="Username">Username</label>
+                        {{ form.username }}
+                        <br>
+
+                        <label for="Fname"> Name</label>
+                        {{ form.name }}
+                        <br>
+
+                        <label for="Age">Age</label>
+                        {{ form.age }}
+                        <br>
+
+                        <label for="specialty">Specialty</label>
+                        {{ form.specialty }}
+                        <br>
+
+                         <label for="Address">Address</label>
+                        {{ form.address }}
+                        <br>
+
+                        <label for="Insurance">Insurance Accepted</label>
+                        {{ form.insuranceaccepted }}
+                        <br>
+
+                        <label for="Availabity"> Availability Start </label>
+                        {{ form.starttime }}
+                        <br>
+
+                        <label for="Availabity"> Availability End </label>
+                        {{ form.endtime }}
+                        <br>
+
+                        <label for="email">Email Address</label>
+                         {{ form.email }}
+                        <br>
+                        <label for="password">Password</label>
+                         {{ form.password1 }}
+                        <br>
+                        <label for="Confirm password">Confirm password</label>
+                        {{ form.password2 }}
+
+                        <br>
+
+                    </div>
+            </div>
+
+
+                <div>
+                    <span class="text-error">{{ form.errors }}</span>
+                     <label class="btn btn-outline-primary" > Confirm you are Treatment Provider {{ form.is_tp}} </label>
+                  <input type="submit"  value="Register" class="btn btn-outline-success btn-form">
+                </div>
+
+            </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
