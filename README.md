@@ -3,8 +3,8 @@ A web application prototype bringing patients and doctors together in the region
 
 My specific contributions were: 
 - Writing the system request and typsetting in Latex
-- Authoring many of planning documentations
+- Authoring many of the planning documentations
 - Designing the class diagrams and one of the sequence diagrams
-- Coding the credentials application that let's files to be uploaded to this web application.
+- Coding the credentials application that uploads files to the web application.
 
 
